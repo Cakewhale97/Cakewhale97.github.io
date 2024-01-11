@@ -368,7 +368,7 @@ h3 {
 .about-btn button {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 10px;
   background: var(--first-color);
   color: var(--color-white);
   border-radius: 30px;
@@ -426,6 +426,12 @@ h3 {
   overflow: hidden;
 }
 
+.project-link {
+  text-decoration: none;
+  color: #777;
+  font-weight: 600;
+}
+
 .project-box > i {
   font-size: 50px;
   color: #00b5e7;
@@ -456,9 +462,14 @@ h3 {
 
 .project-box:hover.project-box i,
 .project-box:hover.project-box > h3,
+.project-box:hover.project-box > a,
 .project-box:hover.project-box > label {
   color: var(--color-white);
   z-index: 2;
+}
+
+.project-box:hover.project-box > a {
+  color: black;
 }
 
 /* Contact Box */
