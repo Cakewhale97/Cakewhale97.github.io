@@ -446,7 +446,7 @@ h3 {
 }
 
 .project-box label {
-  font-size: 15px;
+  font-size: 14px;
   color: #777;
 }
 
@@ -628,6 +628,15 @@ footer {
     width: 320px;
     height: 320px;
   }
+
+  .project-box label {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .project-box a {
+    font-size: 12px;
+  }
 }
 
 /* 900px */
@@ -709,6 +718,8 @@ footer {
   .project-box {
     width: 80%;
   }
+
+ 
 }
 
 /* 540px */
@@ -726,4 +737,6 @@ footer {
   .input-field {
     width: 100%;
   }
+
+  
 }
