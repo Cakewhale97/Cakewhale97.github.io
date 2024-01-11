@@ -55,6 +55,9 @@ html {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.4s;
+}
+
+a.btn {
   text-decoration: none;
   color: black;
 }
