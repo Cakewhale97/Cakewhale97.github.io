@@ -248,6 +248,13 @@ nav {
   cursor: pointer;
 }
 
+.uil-instagram,
+.uil-linkedin-alt,
+.uil-github-alt {
+  text-decoration: none;
+  color: inherit;
+}
+
 .icon:hover {
   color: var(--first-color);
 }
