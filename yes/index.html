@@ -1,89 +1,309 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.7.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.7.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!--  UNICONS  -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Portfolio</title>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div class="container">
+      <!--HEADER-->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Jassin</p>
+          <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="#home" class="nav-link active-link">Home</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#about" class="nav-link">About</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#projects" class="nav-link">Projects</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#contact" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <div class="download-section">
+            <a
+              href="./CV/CV Jassin Al-Safe.pdf"
+              download="./CV/CV Jassin Al-Safe.pdf"
+              class="btn"
+            >
+              Download CV <i class="uil uil-import"></i>
+            </a>
+          </div>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+      <!-- Main -->
+      <main class="wrapper">
+        <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+              <span>Jassin Al-Safe</span>
+            </div>
+            <div class="featured-name">
+              <p>I'm a <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+              <p>
+                Frontend devoloper student at Jensens Yrkeshögskola with a
+                passion for creating visually and user-friendly websites.
+              </p>
+            </div>
+            <div class="featured-text-btn">
+              <button class="btn blue-btn">Hire Me</button>
+              <button class="btn" id="downloadCvButton">
+                Download CV <i class="uil uil-file-alt"></i>
+              </button>
+            </div>
+            <div class="social_icons">
+              <div class="icons">
+                <a
+                  href="https://www.instagram.com/"
+                  class="uil uil-instagram"
+                ></a>
+              </div>
+              <div class="icons">
+                <a
+                  href="https://www.linkedin.com/in/jassin-al-safe-343939181/"
+                  class="uil uil-linkedin-alt"
+                ></a>
+              </div>
+              <div class="icons">
+                <a
+                  href="https://github.com/Cakewhale97/Portfolio-Projects"
+                  class="uil uil-github-alt"
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+              <img
+                src="/img/49BCB2DB-A702-4681-888B-298B4F97F7AC_1_105_c.jpeg"
+                alt="avatar"
+              />
+            </div>
+          </div>
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+              <i class="uil uil-mouse-alt"></i>
+              <p>Scroll Down</p>
+            </a>
+          </div>
+        </section>
+        <!-- ABOUT BOX -->
+        <section class="section" id="about">
+          <div class="top-header">
+            <h1>About Me</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="about-info">
+                <h3>My Introduction</h3>
+                <p>
+                  I am a student currently exploring the realms of web
+                  development, with a growing knowledge in HTML, CSS, and
+                  JavaScript. My journey is filled with continuous learning and
+                  practical application, allowing me to gradually build my
+                  skills. I am enthusiastic about understanding and utilizing
+                  these technologies to create simple yet effective web designs.
+                  As I progress, I'm keen on embracing new challenges and
+                  opportunities to deepen my understanding and experience in web
+                  development.
+                </p>
+                <div class="about-btn">
+                  <button class="btn" id="downloadCvButton">
+                    Download CV <i class="uil uil-import"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Frontend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Javascript</span>
+                  <span>Figma</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Backend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>Python</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Database</h3>
+                </div>
+                <div class="skills-list">
+                  <h3>Firebase</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Project Box-->
+
+        <section class="section" id="projects">
+          <div class="top-header">
+            <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-box">
+              <i class="uil uil-briefcase-alt"></i>
+              <h3>Completed</h3>
+              <label>10+ Finished Projects</label>
+            </div>
+            <div class="project-box">
+              <i class="uil uil-cloud-sun-rain"></i>
+              <h3>Solaris</h3>
+              <label>Explore the planets in our Solar system</label>
+              <a
+                href="https://github.com/Cakewhale97/Jassin/tree/main/Examination%20Jassin%20Javascript%20Grundl%C3%A4ggande"
+                class="project-link"
+                >Show Me</a
+              >
+            </div>
+            <div class="project-box">
+              <i class="uil uil-telescope"></i>
+              <h3>Weather App</h3>
+              <label>Simple weather app built with the use of API</label>
+              <a
+                href="https://github.com/Cakewhale97/Profolio-Projects/tree/main/Weather%20App"
+                class="project-link"
+                >Show Me</a
+              >
+            </div>
+            <div class="project-box">
+              <i class="uil uil-music"></i>
+              <h3>Record Player</h3>
+              <label>Play Music through a vinyl on the web </label>
+              <a
+                href="https://github.com/Cakewhale97/Portfolio-Projects/tree/main/Record%20Player"
+                class="project-link"
+                >Show Me</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Box -->
+
+        <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Do you need a LIA/Intern, contact me here</span>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="contact-info">
+                <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                <p>
+                  <i class="uil uil-envelope"></i>Email:
+                  jassinalsafe90@gmail.com
+                </p>
+                <p><i class="uil uil-phone"></i>Tel: +0723319595</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-control">
+                <div class="form-inputs">
+                  <input type="text" class="input-field" placeholder="Name" />
+                  <input type="text" class="input-field" placeholder="Email" />
+                </div>
+                <div class="text-area">
+                  <textarea placeholder="Message"></textarea>
+                </div>
+                <div class="form-button">
+                  <button class="btn">
+                    Send <i class="uil uil-message"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!--Footer-->
+      <footer>
+        <div class="top-footer">
+          <p>Jassin Al-Safe</p>
+        </div>
+        <div class="middle-footer">
+          <ul class="footer-menu">
+            <li class="footer_menu_list">
+              <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social-icons">
+          <div class="icon"><i class="uil uil-instagram"></i></div>
+          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+          <p>
+            Copyright &copy;
+            <a href="#home" style="text-decoration: none">Jassin Al-Safe</a> All
+            rights reserved
+          </p>
+        </div>
+      </footer>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
